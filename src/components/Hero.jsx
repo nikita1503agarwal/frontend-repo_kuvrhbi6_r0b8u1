@@ -12,6 +12,15 @@ const subtitleVariant = {
 }
 
 export default function Hero({ onExplore }) {
+  // Safely encode the inline SVG to avoid JSX parsing issues
+  const pixelStarsSVG = encodeURIComponent(
+    '<svg xmlns="http://www.w3.org/2000/svg" width="100" height="8" shape-rendering="crispEdges">' +
+      '<rect width="2" height="2" x="2" y="2" fill="#a5b4fc"/>' +
+      '<rect width="2" height="2" x="40" y="4" fill="#99c1ff"/>' +
+      '<rect width="2" height="2" x="70" y="1" fill="#88a8ff"/>' +
+    '</svg>'
+  )
+
   return (
     <section className="relative overflow-hidden">
       {/* Cosmic glow background */}
@@ -68,7 +77,10 @@ export default function Hero({ onExplore }) {
       </div>
 
       {/* Scrolling pixel stars */}
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-[url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"100\" height=\"8\" shape-rendering=\"crispEdges\"><rect width=\"2\" height=\"2\" x=\"2\" y=\"2\" fill=\"%23a5b4fc\"/><rect width=\"2\" height=\"2\" x=\"40\" y=\"4\" fill=\"%2399c1ff\"/><rect width=\"2\" height=\"2\" x=\"70\" y=\"1\" fill=\"%2388a8ff\"/></svg>')] [image-rendering:pixelated] animate-[scrollX_18s_linear_infinite] opacity-50" />
+      <div
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-24 [image-rendering:pixelated] animate-[scrollX_18s_linear_infinite] opacity-50"
+        style={{ backgroundImage: `url("data:image/svg+xml;utf8,${pixelStarsSVG}")` }}
+      />
     </section>
   )
 }
