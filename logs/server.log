@@ -3,17 +3,13 @@
 > vite
 
 
-  VITE v5.4.20  ready in 229 ms
+  VITE v5.4.20  ready in 212 ms
 
   ➜  Local:   http://localhost:3000/
   ➜  Network: http://172.20.31.183:3000/
-5:29:05 PM [vite] Pre-transform error: Transform failed with 1 error:
+5:31:46 PM [vite] Pre-transform error: Transform failed with 1 error:
 /home/workspace/src/components/Hero.jsx:71:126: ERROR: Expected identifier after "http:" in namespaced JSX name
-5:29:05 PM [vite] ✨ new dependencies optimized: framer-motion, lucide-react
-5:29:05 PM [vite] ✨ optimized dependencies changed. reloading
-5:29:06 PM [vite] Pre-transform error: Transform failed with 1 error:
-/home/workspace/src/components/Hero.jsx:71:126: ERROR: Expected identifier after "http:" in namespaced JSX name
-5:29:07 PM [vite] Internal server error: Transform failed with 1 error:
+5:31:47 PM [vite] Internal server error: Transform failed with 1 error:
 /home/workspace/src/components/Hero.jsx:71:126: ERROR: Expected identifier after "http:" in namespaced JSX name
   Plugin: vite:esbuild
   File: /home/workspace/src/components/Hero.jsx:71:126
@@ -36,7 +32,7 @@
       at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
       at Readable.push (node:internal/streams/readable:390:5)
       at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
-5:29:37 PM [vite] Internal server error: Transform failed with 1 error:
+5:32:11 PM [vite] Internal server error: Transform failed with 1 error:
 /home/workspace/src/components/Hero.jsx:71:126: ERROR: Expected identifier after "http:" in namespaced JSX name
   Plugin: vite:esbuild
   File: /home/workspace/src/components/Hero.jsx:71:126
